@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vinay & Gowthami Wedding</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header>
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <h1>Vinay & Gowthami</h1>
+    </header>
+
+    <div class="side-menu" id="side-menu">
+        <button class="close-button" id="close-menu">&times;</button>
+        <div class="menu-container">
+            <div class="menu-buttons">
+        <button class="menu-button" onclick="window.open('https://maps.app.goo.gl/hPAEKvZoXvZ5ZgE87', '_blank')">Venue Location</button>
+                <button class="menu-button" onclick="window.open('https://raayacreations.onrender.com', '_blank')">About Us</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="overlay" id="overlay"></div>
+
+    <main>
+        <div class="container">
+            <div class="trigger-container">
+                <img id="trigger-image" src="PICS/trigger.png" alt="Shank Nam Chakra" class="trigger-image">
+                <p id="trigger-text" class="trigger-text">Tap the sacred<br> Shank Nam Chakra to unveil invitation</p>
+            </div>
+            <video id="intro-video" class="intro-video" controls style="display: none;">
+                <source src="VIDEOS/vid.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 All Rights Reserved | Raaya</p>
+    </footer>
+
+    <script src="index.js"></script>
+</body>
+</html>
