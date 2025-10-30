@@ -4,6 +4,24 @@ document.addEventListener('DOMContentLoaded', function() {
     const introVideo = document.getElementById('intro-video');
     const body = document.body;
 
+    // Disable right-click context menu
+    document.addEventListener('contextmenu', function(e) {
+        e.preventDefault();
+    });
+
+    // Disable long press on mobile devices
+    document.addEventListener('touchstart', function(e) {
+        if (e.touches.length > 1) {
+            e.preventDefault();
+        }
+    });
+
+    document.addEventListener('touchend', function(e) {
+        if (e.changedTouches.length > 1) {
+            e.preventDefault();
+        }
+    });
+
     heartContainer.addEventListener('click', function() {
         // Add glow effect
         heartContainer.classList.add('heart-glow');
@@ -20,7 +38,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 // After 1 more second (total 7 seconds), show and play video
                 setTimeout(function() {
                     introVideo.style.display = 'block';
-                    introVideo.play();
+                    introVideo.play().catch(function(error) {
+                        console.error('Error playing video:', error);
+                    });
                 }, 1000);
             }, 2000);
         }, 4000);
